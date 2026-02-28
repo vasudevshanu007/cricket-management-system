@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   FORM STYLES (Login / Register)
+=========================== */
+.form_style {
+  position: relative;
+  outline: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 40px 36px;
+  background: rgba(27, 42, 74, 0.95);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  width: 420px;
+  max-width: 95vw;
+}
+
+.border-style {
+  border-radius: 16px;
+}
+
+/* ===========================
+   ADMIN DASHBOARD OVERRIDES
+=========================== */
+.admin-card {
+  background: #1B2A4A;
+  border: 1px solid rgba(201, 162, 39, 0.12);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+.admin-card:hover {
+  border-color: rgba(201, 162, 39, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   KPI / STAT BOXES
+=========================== */
+.kpi-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(135deg, #1B2A4A 0%, rgba(201, 162, 39, 0.06) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: 14px;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+.kpi-box::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C9A227, #E8C547);
+}
+.kpi-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #C9A227;
+  line-height: 1;
+}
+.kpi-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #A0B0C8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.kpi-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.12;
+  font-size: 4rem;
+}
+
+/* ===========================
+   TABLE IMPROVEMENTS
+=========================== */
+.pro-table-wrapper {
+  background: #1B2A4A;
+  border: 1px solid rgba(201, 162, 39, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ===========================
+   CHIP / BADGE
+=========================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.status-active  { background: rgba(76, 175, 80, 0.15); color: #4CAF50; border: 1px solid rgba(76, 175, 80, 0.3); }
+.status-pending { background: rgba(255, 152, 0, 0.15); color: #FF9800; border: 1px solid rgba(255, 152, 0, 0.3); }
+.status-inactive{ background: rgba(244, 67, 54, 0.15); color: #F44336; border: 1px solid rgba(244, 67, 54, 0.3); }
+.status-gold    { background: rgba(201, 162, 39, 0.15); color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.3); }
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.12);
+}
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #F5F7FA;
+  letter-spacing: -0.01em;
+}
+.page-subtitle {
+  font-size: 0.9rem;
+  color: #A0B0C8;
+  margin-top: 3px;
+}
+
+/* ===========================
+   SEARCH INPUT
+=========================== */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 10px;
+  padding: 8px 16px;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.search-box:focus-within {
+  border-color: rgba(201, 162, 39, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+}
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #F5F7FA;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  width: 200px;
+}
+.search-box input::placeholder { color: #6B7FA3; }
