@@ -1,1 +1,1 @@
-https://cricket-management-system-fff.onrender.com/
+https://frontend-ochre-two-oyvpgb8eyu.vercel.app
